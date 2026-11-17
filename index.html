@@ -3,189 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meridian — Проверьте идею, прежде чем показывать её людям</title>
-    <meta name="description" content="Meridian — это пространство для проверки идей. Записывайте наблюдения, формулируйте гипотезы и предсказания, а затем смотрите, что сбылось. Создавайте лаборатории и проверяйте идеи вместе с другими — на основе доказательств, а не споров.">
-    <meta property="og:title" content="Meridian — Проверьте идею, прежде чем показывать её людям">
-    <meta property="og:description" content="Пространство для проверки идей: лаборатории, граф мышления, локальный AI и приватность.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://Dinozavrikov.github.io/meridian-pages/">
-    <link rel="canonical" href="https://Dinozavrikov.github.io/meridian-pages/">
+    <title>Meridian — Документация и руководство</title>
+    <meta name="description" content="Полное руководство по Meridian. Узнайте, как проверять идеи, вести наблюдения, создавать лаборатории и использовать инструменты для честного мышления. Всё о философии, возможностях и использовании.">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Meridian",
-      "description": "Пространство для проверки идей: записывайте наблюдения, формулируйте предсказания и проверяйте идеи вместе с другими в лабораториях.",
-      "url": "https://miridin.com",
-      "applicationCategory": "ProductivityApplication",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "RUB"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Dinozavrikov",
-        "url": "https://github.com/Dinozavrikov/Meridian"
-      }
-    }
-    </script>
 </head>
 <body>
-    <header class="hero">
-        <div class="container">
-            <p class="eyebrow">Meridian</p>
-            <h1>Есть идея? Проверьте её. А потом покажите людям.</h1>
-            <p class="tagline">
-                Пространство, где вы и другие проверяете идеи вместе —
-                с доказательствами вместо споров.
-            </p>
-            <div class="cta-group">
-                <a href="https://miridin.com" class="btn-primary" rel="noopener">
-                    Попробовать Meridian →
-                </a>
-                <a href="https://github.com/Dinozavrikov/Meridian" class="btn-secondary" target="_blank" rel="noopener">
-                    Исходный код на GitHub
-                </a>
+    <div class="layout">
+        <!-- Боковое меню -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">Meridian</a>
+                <span class="version">v0.1 (pre-release)</span>
             </div>
-        </div>
-    </header>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Введение</a></li>
+                    <li><a href="#philosophy">Философия</a></li>
+                    <li><a href="#how-it-works">Как это работает</a></li>
+                    <li><a href="#features">Возможности</a></li>
+                    <li><a href="#use-cases">Сценарии использования</a></li>
+                    <li><a href="#faq">Частые вопросы (FAQ)</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <section class="problem container">
-        <h2>Знакомая ситуация?</h2>
-        <p class="section-intro">
-            Вы замечаете что-то важное. У вас есть гипотеза. Но как понять, правы ли вы?
-            Спорить бесполезно — у каждого своя правда. Нужны доказательства.
-        </p>
-        <div class="grid-2">
-            <div class="card">
-                <h3>😵‍💫 Идеи теряются</h3>
-                <p>Мысли, наблюдения и догадки остаются в блокнотах, заметках и переписках. Их невозможно связать в единую картину.</p>
-            </div>
-            <div class="card">
-                <h3>🗣️ Споры ни к чему не приводят</h3>
-                <p>Обсуждения превращаются в соревнование мнений. Побеждает тот, кто громче, а не тот, кто прав.</p>
-            </div>
-            <div class="card">
-                <h3>📉 Предсказания забываются</h3>
-                <p>Мы делаем прогнозы, но не отслеживаем, сбылись ли они. В итоге не учимся на своих ошибках.</p>
-            </div>
-            <div class="card">
-                <h3>🔒 Приватность под угрозой</h3>
-                <p>Личные мысли и данные часто хранятся в сервисах, которые используют их для обучения AI или монетизации.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Основной контент -->
+        <main class="content">
+            <header class="page-header">
+                <h1>Добро пожаловать в Meridian</h1>
+                <p class="lead">Meridian — это инструмент для тех, кто хочет не просто спорить, а находить истину. Мы создали пространство, где идеи проверяются на прочность с помощью доказательств и совместного наблюдения.</p>
+            </header>
 
-    <section class="how-it-works container">
-        <h2>Как работает Meridian</h2>
-        <p class="section-intro">Четыре шага от идеи до доказательства.</p>
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">1</div>
-                <h3>Записывайте</h3>
-                <p>Фиксируйте наблюдения, гипотезы, предсказания и вопросы. Всё в одном месте, связано в граф.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <h3>Формулируйте</h3>
-                <p>Задайте вопрос: «Что бы доказало, что я неправ?» Проверьте, достаточно ли разнообразны ваши доказательства.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <h3>Проверяйте</h3>
-                <p>Создайте лабораторию — общее пространство для проверки идеи. Пригласите людей, распределите роли, сохраняйте снимки состояния.</p>
-            </div>
-            <div class="step">
-                <div class="step-number">4</div>
-                <h3>Сравнивайте</h3>
-                <p>Смотрите, чьи предсказания сбылись. Отделяйте факты от интерпретаций. Учитесь на реальных результатах.</p>
-            </div>
-        </div>
-    </section>
+            <section id="philosophy">
+                <h2>Философия проекта</h2>
+                <p>Мы живём в мире мнений. Каждый день мы сталкиваемся с утверждениями, которые кажутся верными, но не имеют под собой реальной основы. Споры часто превращаются в соревнование громкости, а не логики.</p>
+                <p><strong>Meridian предлагает другой путь.</strong> Вместо того чтобы сразу показывать идею миру, мы предлагаем сначала проверить её. Записать наблюдения, сформулировать гипотезу, сделать предсказание и отследить, сбудется ли оно. Только пройдя такую проверку, идея заслуживает внимания.</p>
+            </section>
 
-    <section class="features container">
-        <h2>Ключевые возможности</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>🧪 Лаборатории</h3>
-                <p>Общее пространство вокруг одного вопроса. Приглашайте людей, давайте роли, сохраняйте снимки и смотрите, кто предсказывает лучше всех.</p>
-            </div>
-            <div class="card">
-                <h3>🧠 Ваше мышление в одном месте</h3>
-                <p>Наблюдения, гипотезы, предсказания, убеждения, вопросы и задачи — всё связано в граф, который можно исследовать.</p>
-            </div>
-            <div class="card">
-                <h3>🔍 Инструменты честного мышления</h3>
-                <p>Спросите: «Что бы доказало мою неправоту?» Проверьте, достаточно ли разнообразны доказательства. Отделите факты от интерпретаций.</p>
-            </div>
-            <div class="card">
-                <h3>🤖 Локальный AI</h3>
-                <p>Перевод, классификация, эмбеддинги и описание изображений работают на локальной модели через Ollama. Никаких внешних AI-сервисов.</p>
-            </div>
-            <div class="card">
-                <h3>📜 Ничего не теряется</h3>
-                <p>У каждой правки есть история с возможностью отмены. Удалённое ждёт в корзине, откуда его можно восстановить. Можно прикреплять файлы.</p>
-            </div>
-            <div class="card">
-                <h3>🔐 Приватность</h3>
-                <p>Личные сообщения зашифрованы в базе данных. Резервные копии зашифрованы и регулярно проверяются на восстановление.</p>
-            </div>
-        </div>
-    </section>
+            <section id="how-it-works">
+                <h2>Как это работает: четыре шага</h2>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-num">1</div>
+                        <div class="step-content">
+                            <h3>Записывайте</h3>
+                            <p>Фиксируйте всё, что замечаете: наблюдения, гипотезы, вопросы, предсказания. Meridian связывает их в единый граф, а не в разрозненные заметки.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">2</div>
+                        <div class="step-content">
+                            <h3>Формулируйте</h3>
+                            <p>Задайте себе вопрос: «Что бы доказало мою неправоту?» Проверьте, достаточно ли разнообразны ваши доказательства. Отделите факты от интерпретаций.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">3</div>
+                        <div class="step-content">
+                            <h3>Проверяйте</h3>
+                            <p>Создайте <strong>лабораторию</strong> — общее пространство для проверки идеи. Пригласите людей, распределите роли, сохраняйте снимки состояния.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-num">4</div>
+                        <div class="step-content">
+                            <h3>Сравнивайте</h3>
+                            <p>Смотрите, чьи предсказания сбылись. Учитесь на реальных результатах, а не на теориях. Meridian покажет, насколько хорошо вы предсказываете.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="examples container">
-        <h2>Для чего это можно использовать?</h2>
-        <p class="section-intro">Meridian подходит как для маленьких, так и для больших вопросов.</p>
-        <div class="grid-2">
-            <div class="card example-card">
-                <h3>🍕 Какая пицца действительно лучшая?</h3>
-                <p>Соберите мнения, сформулируйте критерии, проведите слепую дегустацию и сравните предсказания с результатами.</p>
-            </div>
-            <div class="card example-card">
-                <h3>🌱 Может ли домохозяйство прокормить себя?</h3>
-                <p>Исследуйте гипотезы о урожайности, затратах и логистике. Проверьте их в лаборатории с реальными данными.</p>
-            </div>
-            <div class="card example-card">
-                <h3>💡 Стоит ли запускать этот проект?</h3>
-                <p>Сформулируйте ключевые предположения о рынке и пользователях. Отслеживайте, какие из них подтверждаются.</p>
-            </div>
-            <div class="card example-card">
-                <h3>📊 Насколько точен мой прогноз?</h3>
-                <p>Записывайте предсказания с датами. Сравнивайте с реальностью. Meridian покажет, насколько хорошо вы предсказываете.</p>
-            </div>
-        </div>
-    </section>
+            <section id="features">
+                <h2>Ключевые возможности</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h3>🧪 Лаборатории</h3>
+                        <p>Общее пространство вокруг одного вопроса. Приглашайте людей, давайте роли, сохраняйте снимки и смотрите, кто предсказывает лучше всех.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🧠 Граф мышления</h3>
+                        <p>Наблюдения, гипотезы, предсказания и вопросы — всё связано в граф, который можно исследовать и дополнять.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔍 Инструменты честного мышления</h3>
+                        <p>Встроенные проверки на предвзятость. Заставьте себя искать опровержения, а не подтверждения.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🤖 Локальный AI</h3>
+                        <p>Перевод, классификация и эмбеддинги работают на вашей машине через Ollama. Никаких внешних AI-сервисов.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📜 Полная история</h3>
+                        <p>У каждой правки есть история с возможностью отмены. Удалённое ждёт в корзине.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔐 Приватность</h3>
+                        <p>Личные сообщения зашифрованы в базе данных. Резервные копии зашифрованы и проверяются.</p>
+                    </div>
+                </div>
+            </section>
 
-    <section class="stack container">
-        <h2>Технологический стек</h2>
-        <div class="stack-grid">
-            <div><strong>Frontend</strong> Next.js, React, TypeScript</div>
-            <div><strong>Backend</strong> FastAPI (Python 3.12), SQLAlchemy, Alembic</div>
-            <div><strong>Data</strong> PostgreSQL с pgvector, Redis</div>
-            <div><strong>AI</strong> Ollama (локальные модели)</div>
-            <div><strong>Infra</strong> Docker Compose</div>
-        </div>
-    </section>
+            <section id="use-cases">
+                <h2>Сценарии использования</h2>
+                <p>Meridian подходит для любого вопроса, где важна истина, а не мнение.</p>
+                <ul class="use-case-list">
+                    <li><strong>🍕 Бытовые вопросы:</strong> Какая пицца действительно лучшая? Проведите слепую дегустацию и сравните предсказания.</li>
+                    <li><strong>🌱 Серьёзные гипотезы:</strong> Может ли домохозяйство прокормить себя? Исследуйте урожайность, затраты и логистику.</li>
+                    <li><strong>💡 Бизнес-решения:</strong> Стоит ли запускать проект? Сформулируйте ключевые предположения и отслеживайте, какие из них подтверждаются.</li>
+                </ul>
+            </section>
 
-    <section class="cta-final container">
-        <h2>Готовы проверить свою идею?</h2>
-        <p>Meridian находится в активной разработке (pre-1.0). Используйте его для экспериментов, делайте резервные копии важных данных и пока не рассматривайте как production-ready решение.</p>
-        <a href="https://miridin.com" class="btn-primary btn-large" rel="noopener">
-            Перейти на Meridian →
-        </a>
-    </section>
+            <section id="faq">
+                <h2>Частые вопросы (FAQ)</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Это бесплатно?</summary>
+                        <p>Да, Meridian находится в активной разработке и доступен для экспериментов. Вы можете развернуть его локально или использовать публичный инстанс.</p>
+                    </details>
+                    <details>
+                        <summary>Мои данные в безопасности?</summary>
+                        <p>Мы уделяем этому первостепенное внимание. Приватные сообщения шифруются, а AI-функции работают локально. Однако помните, что проект находится в стадии pre-1.0, поэтому делайте резервные копии важных данных.</p>
+                    </details>
+                    <details>
+                        <summary>Нужно ли мне быть экспертом?</summary>
+                        <p>Нет. Meridian создан для обычных людей, которые хотят мыслить яснее. Инструменты подскажут, как правильно формулировать гипотезы и проверять их.</p>
+                    </details>
+                </div>
+            </section>
 
-    <footer class="container">
-        <p>
-            &copy; 2026 Meridian.
-            <a href="https://github.com/Dinozavrikov/Meridian" target="_blank" rel="noopener">Исходный код</a> ·
-            <a href="https://github.com/Dinozavrikov/Meridian/blob/main/CHANGELOG.md" target="_blank" rel="noopener">История изменений</a>
-        </p>
-    </footer>
-
+            <div class="page-footer">
+                <p>Готовы попробовать? <a href="https://miridin.com" class="btn-primary">Перейти на Meridian →</a></p>
+            </div>
+        </main>
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

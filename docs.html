@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="yandex-verification" content="67a9aa6c68951625" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техническая архитектура — Meridian</title>
+    <meta name="description" content="Техническая документация проекта Meridian. Архитектура, стек технологий, локальный AI и работа с данными.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Боковое меню (то же самое) -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="logo">Meridian</a>
+                <span class="version">pre-1.0 (в разработке)</span>
+            </div>
+            
+            <nav class="nav">
+                <div class="nav-group">
+                    <span class="nav-title">Обзор</span>
+                    <ul>
+                        <li><a href="index.html">Введение</a></li>
+                        <li><a href="index.html#philosophy">Философия</a></li>
+                        <li><a href="index.html#use-cases">Сценарии</a></li>
+                    </ul>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-title">Разработчикам</span>
+                    <ul>
+                        <li><a href="docs.html" class="active">Техническая архитектура</a></li>
+                        <li><a href="https://github.com/Dinozavrikov/Meridian" target="_blank" rel="noopener">Исходный код ↗</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Контент документации -->
+        <main class="content">
+            <header class="page-header">
+                <h1>Техническая архитектура</h1>
+                <p class="lead">Как устроен Meridian под капотом, какие технологии используются и почему они были выбраны.</p>
+            </header>
+
+            <hr class="divider">
+
+            <section id="architecture">
+                <h2>Общая архитектура</h2>
+                <p>Meridian построен с использованием контейнеризации (Docker). Это позволяет развернуть весь проект локально одной командой. Система разделена на несколько независимых сервисов:</p>
+                <ul class="styled-list">
+                    <li><strong>Frontend:</strong> Отвечает за интерфейс пользователя, отрисовку графа и взаимодействие с API.</li>
+                    <li><strong>Backend (API):</strong> Основная логика, аутентификация, управление сущностями (наблюдения, гипотезы, лаборатории).</li>
+                    <li><strong>Базы данных:</strong> Реляционная БД для основных данных и векторная для поиска.</li>
+                    <li><strong>Очередь задач:</strong> Для фоновой обработки (например, генерация эмбеддингов или проверка прогнозов).</li>
+                </ul>
+            </section>
+
+            <section id="tech-stack">
+                <h2>Технологический стек</h2>
+                <p>Мы используем проверенные технологии, которые обеспечивают высокую производительность и надежность.</p>
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Компонент</th>
+                            <th>Технологии</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>Next.js (React), TypeScript</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend</strong></td>
+                            <td>FastAPI (Python 3.12), SQLAlchemy, Alembic</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Базы данных</strong></td>
+                            <td>PostgreSQL + pgvector (для эмбеддингов), Redis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI</strong></td>
+                            <td>Ollama (локальные модели)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Инфраструктура</strong></td>
+                            <td>Docker Compose, Caddy</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="ai-and-data">
+                <h2>Данные и локальный AI</h2>
+                <p>Важная особенность Meridian — отказ от внешних AI-сервисов (таких как OpenAI или Anthropic). Все задачи, связанные с обработкой естественного языка, решаются локально:</p>
+                <ul class="styled-list">
+                    <li><strong>Векторный поиск:</strong> Благодаря расширению <code>pgvector</code> в PostgreSQL, мы можем хранить и искать по эмбеддингам текста прямо в базе данных.</li>
+                    <li><strong>Локальная модель:</strong> Для перевода, классификации и описания изображений используется Ollama. Это обеспечивает полную конфиденциальность данных — они не покидают ваш сервер.</li>
+                </ul>
+                <p>Без запущенного Ollama приложение работает, но функции, связанные с AI, будут недоступны.</p>
+            </section>
+
+            <section id="quick-start">
+                <h2>Запуск локально</h2>
+                <p>Для запуска вам понадобятся <strong>Docker</strong> и <strong>Docker Compose v2</strong>.</p>
+                <pre><code># 1. Клонируйте репозиторий
+git clone https://github.com/Dinozavrikov/Meridian.git
+cd Meridian
+
+# 2. Подготовьте окружение
+cp .env.example .env
+cp docker-compose.override.example.yml docker-compose.override.yml
+
+# 3. Сгенерируйте секреты (пример для Linux)
+sed -i "s|^SECRET_KEY=.*|SECRET_KEY=$(openssl rand -hex 32)|" .env
+sed -i "s|^POSTGRES_PASSWORD=.*|POSTGRES_PASSWORD=$(openssl rand -hex 16)|" .env
+
+# 4. Запустите контейнеры
+docker compose up -d --build postgres redis backend frontend</code></pre>
+                <p class="note">Интерфейс будет доступен по адресу <code>http://localhost:3000</code>, API — по адресу <code>http://localhost:8000</code>.</p>
+            </section>
+
+            <section id="security">
+                <h2>Безопасность</h2>
+                <ul class="styled-list">
+                    <li><strong>Шифрование:</strong> Приватные сообщения шифруются в базе данных. Резервные копии также зашифрованы.</li>
+                    <li><strong>История изменений:</strong> Каждое действие логируется. Удаленные данные попадают в корзину и могут быть восстановлены.</li>
+                    <li><strong>Открытый код:</strong> Любой может проверить, как работает система, и убедиться в отсутствии скрытой передачи данных третьим лицам.</li>
+                </ul>
+            </section>
+
+            <footer class="site-footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Meridian</h4>
+                        <p>Техническая документация.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ссылки</h4>
+                        <ul>
+                            <li><a href="https://github.com/Dinozavrikov/Meridian">GitHub</a></li>
+                            <li><a href="https://github.com/Dinozavrikov/Meridian/blob/main/CHANGELOG.md">Changelog</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Meridian Project.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

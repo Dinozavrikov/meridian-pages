@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="yandex-verification" content="67a9aa6c68951625" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meridian — Документация и Руководство разработчика</title>
-    <meta name="description" content="Официальная документация Meridian. Архитектура, руководство по развертыванию, политика безопасности и философия проекта.">
+    <title>Meridian — Инструмент для проверки идей</title>
+    <meta name="description" content="Meridian - это открытый проект для проверки гипотез. Записывайте наблюдения, делайте предсказания и проверяйте их вместе с другими.">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,35 +13,24 @@
         <!-- Боковое меню -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <a href="index.html" class="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    Meridian
-                </a>
-                <span class="version">v0.9.0-pre-release</span>
+                <a href="index.html" class="logo">Meridian</a>
+                <span class="version">pre-1.0 (в разработке)</span>
             </div>
             
             <nav class="nav">
                 <div class="nav-group">
                     <span class="nav-title">Обзор</span>
                     <ul>
-                        <li><a href="#introduction" class="active">Введение</a></li>
-                        <li><a href="#philosophy">Философия проекта</a></li>
-                        <li><a href="#use-cases">Сценарии использования</a></li>
+                        <li><a href="index.html#introduction" class="active">Введение</a></li>
+                        <li><a href="index.html#philosophy">Философия</a></li>
+                        <li><a href="index.html#use-cases">Сценарии</a></li>
                     </ul>
                 </div>
                 <div class="nav-group">
-                    <span class="nav-title">Техническая документация</span>
+                    <span class="nav-title">Разработчикам</span>
                     <ul>
-                        <li><a href="#architecture">Архитектура</a></li>
-                        <li><a href="#tech-stack">Технологический стек</a></li>
-                        <li><a href="#quick-start">Быстрый старт</a></li>
-                    </ul>
-                </div>
-                <div class="nav-group">
-                    <span class="nav-title">Безопасность и Право</span>
-                    <ul>
-                        <li><a href="#security">Безопасность</a></li>
-                        <li><a href="#license">Лицензия</a></li>
+                        <li><a href="docs.html">Техническая архитектура</a></li>
+                        <li><a href="https://github.com/Dinozavrikov/Meridian" target="_blank" rel="noopener">Исходный код ↗</a></li>
                     </ul>
                 </div>
             </nav>
@@ -50,126 +39,40 @@
         <!-- Основной контент -->
         <main class="content">
             <header class="page-header" id="introduction">
-                <div class="badges">
-                    <span class="badge badge-primary">Open Source</span>
-                    <span class="badge badge-warning">In Development</span>
-                </div>
-                <h1>Добро пожаловать в Meridian</h1>
-                <p class="lead">Meridian — это корпоративный стандарт для проверки гипотез и совместного принятия решений на основе данных. Инструмент для тех, кто хочет не просто спорить, а находить истину.</p>
+                <h1>Meridian</h1>
+                <p class="lead">Открытый инструмент для тех, кто хочет проверять свои идеи, а не просто спорить о них.</p>
                 <div class="hero-actions">
-                    <a href="https://miridin.com" class="btn-primary">Открыть приложение →</a>
-                    <a href="https://github.com/Dinozavrikov/Meridian" class="btn-secondary">Репозиторий на GitHub</a>
+                    <a href="https://miridin.com" class="btn-primary">Открыть приложение</a>
+                    <a href="docs.html" class="btn-secondary">Техническая документация</a>
                 </div>
             </header>
 
             <hr class="divider">
 
             <section id="philosophy">
-                <h2>Философия проекта</h2>
-                <p>Мы живём в мире мнений. Каждый день мы сталкиваемся с утверждениями, которые кажутся верными, но не имеют под собой реальной основы. Споры часто превращаются в соревнование громкости, а не логики.</p>
-                <p><strong>Meridian предлагает другой путь.</strong> Вместо того чтобы сразу показывать идею миру, мы предлагаем сначала проверить её. Записать наблюдения, сформулировать гипотезу, сделать предсказание и отследить, сбудется ли оно.</p>
+                <h2>Зачем это нужно</h2>
+                <p>Мы часто сталкиваемся с утверждениями, которые кажутся верными, но не имеют под собой реальной основы. Споры превращаются в соревнование мнений, где побеждает тот, кто громче, а не тот, кто прав.</p>
+                <p><strong>Meridian предлагает другой подход.</strong> Запишите наблюдение, сформулируйте гипотезу, сделайте предсказание. А затем отследите, сбудется ли оно. Только пройдя такую проверку, идея заслуживает внимания.</p>
+                <p>Проект находится в активной разработке. Многие функции еще не завершены, API и модель данных могут меняться. Используйте его для экспериментов.</p>
             </section>
 
             <section id="use-cases">
-                <h2>Сценарии использования</h2>
+                <h2>Как это можно использовать</h2>
                 <p>Meridian подходит для любого вопроса, где важна истина, а не мнение.</p>
                 <div class="grid-3">
                     <div class="card">
-                        <h3>🍕 Бытовые вопросы</h3>
+                        <h3>Бытовые вопросы</h3>
                         <p>Какая пицца действительно лучшая? Проведите слепую дегустацию и сравните предсказания.</p>
                     </div>
                     <div class="card">
-                        <h3>🌱 Серьёзные гипотезы</h3>
+                        <h3>Серьезные гипотезы</h3>
                         <p>Может ли домохозяйство прокормить себя? Исследуйте урожайность, затраты и логистику.</p>
                     </div>
                     <div class="card">
-                        <h3>💡 Бизнес-решения</h3>
+                        <h3>Бизнес-решения</h3>
                         <p>Стоит ли запускать проект? Сформулируйте ключевые предположения и отслеживайте их.</p>
                     </div>
                 </div>
-            </section>
-
-            <hr class="divider">
-
-            <section id="architecture">
-                <h2>Архитектура системы</h2>
-                <p>Meridian построен на основе микросервисной архитектуры, оптимизированной для локального развертывания и обеспечения максимальной приватности. Система состоит из трех основных слоев:</p>
-                <ul class="styled-list">
-                    <li><strong>Слой представления:</strong> Next.js приложение (SSR/SPA), обеспечивающее отзывчивый интерфейс и работу с графом.</li>
-                    <li><strong>Слой бизнес-логики:</strong> FastAPI (Python 3.12), обрабатывающий запросы, управляющий доступом и оркестрирующий работу AI-моделей.</li>
-                    <li><strong>Слой данных:</strong> PostgreSQL с расширением <code>pgvector</code> для векторного поиска, а также Redis для кэширования.</li>
-                </ul>
-            </section>
-
-            <section id="tech-stack">
-                <h2>Технологический стек</h2>
-                <table class="tech-table">
-                    <thead>
-                        <tr>
-                            <th>Уровень</th>
-                            <th>Технологии</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Frontend</strong></td>
-                            <td>Next.js, React, TypeScript</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Backend</strong></td>
-                            <td>FastAPI (Python 3.12), SQLAlchemy, Alembic</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Базы данных</strong></td>
-                            <td>PostgreSQL (с pgvector), Redis</td>
-                        </tr>
-                        <tr>
-                            <td><strong>AI / ML</strong></td>
-                            <td>Ollama (локальные модели, без внешних API)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Инфраструктура</strong></td>
-                            <td>Docker Compose, Caddy (Reverse Proxy)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="quick-start">
-                <h2>Быстрый старт (Разработка)</h2>
-                <p>Для запуска проекта локально вам понадобятся <strong>Docker</strong> и <strong>Docker Compose v2</strong>. Ollama опционален и нужен только для AI-функций.</p>
-                <pre><code># 1. Клонируйте репозиторий
-git clone https://github.com/Dinozavrikov/Meridian.git
-cd Meridian
-
-# 2. Настройте переменные окружения
-cp .env.example .env
-cp docker-compose.override.example.yml docker-compose.override.yml
-
-# 3. Сгенерируйте секретные ключи (пример для Linux)
-sed -i "s|^SECRET_KEY=.*|SECRET_KEY=$(openssl rand -hex 32)|" .env
-sed -i "s|^POSTGRES_PASSWORD=.*|POSTGRES_PASSWORD=$(openssl rand -hex 16)|" .env
-
-# 4. Запустите контейнеры
-docker compose up -d --build postgres redis backend frontend</code></pre>
-                <p class="note">После запуска приложение будет доступно по адресу <code>http://localhost:3000</code>.</p>
-            </section>
-
-            <hr class="divider">
-
-            <section id="security">
-                <h2>Безопасность и Конфиденциальность</h2>
-                <p>В корпоративной среде безопасность данных стоит на первом месте. В Meridian реализованы следующие механизмы:</p>
-                <ul class="styled-list">
-                    <li><strong>Шифрование данных:</strong> Приватные сообщения шифруются на уровне базы данных (AES). Резервные копии также зашифрованы.</li>
-                    <li><strong>Локальный AI:</strong> Все процессы обработки естественного языка (NLP), включая эмбеддинги и перевод, выполняются локально через Ollama. Данные не передаются в OpenAI или другие облачные сервисы.</li>
-                    <li><strong>Аудит:</strong> Каждое действие в системе логируется. Удаленные данные перемещаются в корзину и могут быть восстановлены администратором.</li>
-                </ul>
-            </section>
-
-            <section id="license">
-                <h2>Лицензия</h2>
-                <p>Проект распространяется с открытым исходным кодом. Подробную информацию о правах и ограничениях можно найти в файле <a href="https://github.com/Dinozavrikov/Meridian/blob/main/LICENSE">LICENSE</a> в корне репозитория.</p>
             </section>
 
             <!-- Футер -->
@@ -189,12 +92,11 @@ docker compose up -d --build postgres redis backend frontend</code></pre>
                     </div>
                     <div class="footer-col">
                         <h4>Статус</h4>
-                        <p><span class="status-dot"></span> Все системы работают</p>
-                        <p style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem;">Сборка: GitHub Pages</p>
+                        <p>Проект в разработке</p>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>&copy; 2026 Meridian Project. Все права защищены.</p>
+                    <p>&copy; 2026 Meridian Project.</p>
                 </div>
             </footer>
         </main>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="yandex-verification" content="67a9aa6c68951625" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meridian — Инструмент для проверки идей</title>
-    <meta name="description" content="Meridian - это открытый проект для проверки гипотез. Записывайте наблюдения, делайте предсказания и проверяйте их вместе с другими.">
+    <title>Meridian — Git для исследований</title>
+    <meta name="description" content="Meridian — это платформа для проведения исследований. Ветвите гипотезы, собирайте доказательства в лабораториях и предлагайте результаты рынку.">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,17 +13,18 @@
         <!-- Боковое меню -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <a href="index.html" class="logo">Meridian</a>
-                <span class="version">pre-1.0 (в разработке)</span>
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"></span> Meridian
+                </a>
+                <span class="version">v0.9.0-pre-release</span>
             </div>
             
             <nav class="nav">
                 <div class="nav-group">
-                    <span class="nav-title">Обзор</span>
+                    <span class="nav-title">Продукт</span>
                     <ul>
-                        <li><a href="index.html#introduction" class="active">Введение</a></li>
-                        <li><a href="index.html#philosophy">Философия</a></li>
-                        <li><a href="index.html#use-cases">Сценарии</a></li>
+                        <li><a href="index.html" class="active">Обзор</a></li>
+                        <li><a href="philosophy.html">Философия</a></li>
                     </ul>
                 </div>
                 <div class="nav-group">
@@ -36,43 +37,48 @@
             </nav>
         </aside>
 
-        <!-- Основной контент -->
+        <!-- Контент -->
         <main class="content">
-            <header class="page-header" id="introduction">
-                <h1>Meridian</h1>
-                <p class="lead">Открытый инструмент для тех, кто хочет проверять свои идеи, а не просто спорить о них.</p>
+            <div class="hero">
+                <div class="hero-badge">Открытый исходный код</div>
+                <h1>Инфраструктура для ваших исследований</h1>
+                <p class="lead">Meridian — это Git для научной и аналитической работы. Ветвите идеи, фиксируйте коммиты наблюдений, объединяйте доказательства в лабораториях и выводите результаты на рынок.</p>
                 <div class="hero-actions">
-                    <a href="https://miridin.com" class="btn-primary">Открыть приложение</a>
-                    <a href="docs.html" class="btn-secondary">Техническая документация</a>
+                    <a href="https://miridin.com" class="btn-primary">Начать исследование</a>
+                    <a href="philosophy.html" class="btn-secondary">Зачем это нужно</a>
                 </div>
-            </header>
+            </div>
 
             <hr class="divider">
 
-            <section id="philosophy">
-                <h2>Зачем это нужно</h2>
-                <p>Мы часто сталкиваемся с утверждениями, которые кажутся верными, но не имеют под собой реальной основы. Споры превращаются в соревнование мнений, где побеждает тот, кто громче, а не тот, кто прав.</p>
-                <p><strong>Meridian предлагает другой подход.</strong> Запишите наблюдение, сформулируйте гипотезу, сделайте предсказание. А затем отследите, сбудется ли оно. Только пройдя такую проверку, идея заслуживает внимания.</p>
-                <p>Проект находится в активной разработке. Многие функции еще не завершены, API и модель данных могут меняться. Используйте его для экспериментов.</p>
-            </section>
-
-            <section id="use-cases">
-                <h2>Как это можно использовать</h2>
-                <p>Meridian подходит для любого вопроса, где важна истина, а не мнение.</p>
+            <section>
+                <h2>Как это работает</h2>
                 <div class="grid-3">
                     <div class="card">
-                        <h3>Бытовые вопросы</h3>
-                        <p>Какая пицца действительно лучшая? Проведите слепую дегустацию и сравните предсказания.</p>
+                        <div class="card-icon">⑂</div>
+                        <h3>Ветвление гипотез</h3>
+                        <p>Создавайте ответвления от основной идеи. Проверяйте разные сценарии параллельно, не теряя контекст основного исследования.</p>
                     </div>
                     <div class="card">
-                        <h3>Серьезные гипотезы</h3>
-                        <p>Может ли домохозяйство прокормить себя? Исследуйте урожайность, затраты и логистику.</p>
+                        <div class="card-icon">🔬</div>
+                        <h3>Лаборатории</h3>
+                        <p>Совместная работа. Приглашайте участников, распределяйте роли, фиксируйте наблюдения и сравнивайте прогнозы с реальностью.</p>
                     </div>
                     <div class="card">
-                        <h3>Бизнес-решения</h3>
-                        <p>Стоит ли запускать проект? Сформулируйте ключевые предположения и отслеживайте их.</p>
+                        <div class="card-icon">📈</div>
+                        <h3>Выход на рынок</h3>
+                        <p>Готовые, проверенные исследования становятся ценным активом. Предлагайте результаты вашей работы заинтересованным сторонам.</p>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <h2>Для кого этот инструмент</h2>
+                <ul class="styled-list">
+                    <li><strong>Для ученых и аналитиков:</strong> Прозрачное версионирование данных и совместная работа над сложными гипотезами.</li>
+                    <li><strong>Для бизнеса:</strong> Проверка рыночных предположений до запуска продуктов. Все решения основаны на зафиксированных доказательствах.</li>
+                    <li><strong>Для энтузиастов:</strong> Проверка бытовых вопросов (от выбора техники до кулинарных рецептов) с научным подходом.</li>
+                </ul>
             </section>
 
             <!-- Футер -->
@@ -87,12 +93,11 @@
                         <ul>
                             <li><a href="https://github.com/Dinozavrikov/Meridian">Исходный код</a></li>
                             <li><a href="https://github.com/Dinozavrikov/Meridian/blob/main/CHANGELOG.md">Changelog</a></li>
-                            <li><a href="https://github.com/Dinozavrikov/Meridian/issues">Сообщить об ошибке</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>Статус</h4>
-                        <p>Проект в разработке</p>
+                        <p>Проект в активной разработке.</p>
                     </div>
                 </div>
                 <div class="footer-bottom">

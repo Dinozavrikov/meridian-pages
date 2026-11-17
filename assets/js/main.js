@@ -1,19 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Плавный скролл только для ссылок-якорей на текущей странице
+    // Логика активного пункта меню при скролле для одной страницы
+    const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            if (targetSection) {
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-                
-                // Обновляем класс active
-                document.querySelectorAll('.nav a').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
+
+    if (sections.length > 0 && navLinks.length > 0) {
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    if (id) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+        sections.forEach(section => observer.observe(section));
+    }
 });

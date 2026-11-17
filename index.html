@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="yandex-verification" content="67a9aa6c68951625" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meridian — Документация и руководство</title>
-    <meta name="description" content="Полное руководство по Meridian. Узнайте, как проверять идеи, вести наблюдения, создавать лаборатории и использовать инструменты для честного мышления. Всё о философии, возможностях и использовании.">
+    <title>Meridian — Документация и Руководство разработчика</title>
+    <meta name="description" content="Официальная документация Meridian. Архитектура, руководство по развертыванию, политика безопасности и философия проекта.">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,129 +13,190 @@
         <!-- Боковое меню -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <a href="index.html" class="logo">Meridian</a>
-                <span class="version">v0.1 (pre-release)</span>
+                <a href="index.html" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Meridian
+                </a>
+                <span class="version">v0.9.0-pre-release</span>
             </div>
+            
             <nav class="nav">
-                <ul>
-                    <li><a href="index.html" class="active">Введение</a></li>
-                    <li><a href="#philosophy">Философия</a></li>
-                    <li><a href="#how-it-works">Как это работает</a></li>
-                    <li><a href="#features">Возможности</a></li>
-                    <li><a href="#use-cases">Сценарии использования</a></li>
-                    <li><a href="#faq">Частые вопросы (FAQ)</a></li>
-                </ul>
+                <div class="nav-group">
+                    <span class="nav-title">Обзор</span>
+                    <ul>
+                        <li><a href="#introduction" class="active">Введение</a></li>
+                        <li><a href="#philosophy">Философия проекта</a></li>
+                        <li><a href="#use-cases">Сценарии использования</a></li>
+                    </ul>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-title">Техническая документация</span>
+                    <ul>
+                        <li><a href="#architecture">Архитектура</a></li>
+                        <li><a href="#tech-stack">Технологический стек</a></li>
+                        <li><a href="#quick-start">Быстрый старт</a></li>
+                    </ul>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-title">Безопасность и Право</span>
+                    <ul>
+                        <li><a href="#security">Безопасность</a></li>
+                        <li><a href="#license">Лицензия</a></li>
+                    </ul>
+                </div>
             </nav>
         </aside>
 
         <!-- Основной контент -->
         <main class="content">
-            <header class="page-header">
+            <header class="page-header" id="introduction">
+                <div class="badges">
+                    <span class="badge badge-primary">Open Source</span>
+                    <span class="badge badge-warning">In Development</span>
+                </div>
                 <h1>Добро пожаловать в Meridian</h1>
-                <p class="lead">Meridian — это инструмент для тех, кто хочет не просто спорить, а находить истину. Мы создали пространство, где идеи проверяются на прочность с помощью доказательств и совместного наблюдения.</p>
+                <p class="lead">Meridian — это корпоративный стандарт для проверки гипотез и совместного принятия решений на основе данных. Инструмент для тех, кто хочет не просто спорить, а находить истину.</p>
+                <div class="hero-actions">
+                    <a href="https://miridin.com" class="btn-primary">Открыть приложение →</a>
+                    <a href="https://github.com/Dinozavrikov/Meridian" class="btn-secondary">Репозиторий на GitHub</a>
+                </div>
             </header>
+
+            <hr class="divider">
 
             <section id="philosophy">
                 <h2>Философия проекта</h2>
                 <p>Мы живём в мире мнений. Каждый день мы сталкиваемся с утверждениями, которые кажутся верными, но не имеют под собой реальной основы. Споры часто превращаются в соревнование громкости, а не логики.</p>
-                <p><strong>Meridian предлагает другой путь.</strong> Вместо того чтобы сразу показывать идею миру, мы предлагаем сначала проверить её. Записать наблюдения, сформулировать гипотезу, сделать предсказание и отследить, сбудется ли оно. Только пройдя такую проверку, идея заслуживает внимания.</p>
-            </section>
-
-            <section id="how-it-works">
-                <h2>Как это работает: четыре шага</h2>
-                <div class="steps-list">
-                    <div class="step-item">
-                        <div class="step-num">1</div>
-                        <div class="step-content">
-                            <h3>Записывайте</h3>
-                            <p>Фиксируйте всё, что замечаете: наблюдения, гипотезы, вопросы, предсказания. Meridian связывает их в единый граф, а не в разрозненные заметки.</p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num">2</div>
-                        <div class="step-content">
-                            <h3>Формулируйте</h3>
-                            <p>Задайте себе вопрос: «Что бы доказало мою неправоту?» Проверьте, достаточно ли разнообразны ваши доказательства. Отделите факты от интерпретаций.</p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num">3</div>
-                        <div class="step-content">
-                            <h3>Проверяйте</h3>
-                            <p>Создайте <strong>лабораторию</strong> — общее пространство для проверки идеи. Пригласите людей, распределите роли, сохраняйте снимки состояния.</p>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-num">4</div>
-                        <div class="step-content">
-                            <h3>Сравнивайте</h3>
-                            <p>Смотрите, чьи предсказания сбылись. Учитесь на реальных результатах, а не на теориях. Meridian покажет, насколько хорошо вы предсказываете.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="features">
-                <h2>Ключевые возможности</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <h3>🧪 Лаборатории</h3>
-                        <p>Общее пространство вокруг одного вопроса. Приглашайте людей, давайте роли, сохраняйте снимки и смотрите, кто предсказывает лучше всех.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🧠 Граф мышления</h3>
-                        <p>Наблюдения, гипотезы, предсказания и вопросы — всё связано в граф, который можно исследовать и дополнять.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🔍 Инструменты честного мышления</h3>
-                        <p>Встроенные проверки на предвзятость. Заставьте себя искать опровержения, а не подтверждения.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🤖 Локальный AI</h3>
-                        <p>Перевод, классификация и эмбеддинги работают на вашей машине через Ollama. Никаких внешних AI-сервисов.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📜 Полная история</h3>
-                        <p>У каждой правки есть история с возможностью отмены. Удалённое ждёт в корзине.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🔐 Приватность</h3>
-                        <p>Личные сообщения зашифрованы в базе данных. Резервные копии зашифрованы и проверяются.</p>
-                    </div>
-                </div>
+                <p><strong>Meridian предлагает другой путь.</strong> Вместо того чтобы сразу показывать идею миру, мы предлагаем сначала проверить её. Записать наблюдения, сформулировать гипотезу, сделать предсказание и отследить, сбудется ли оно.</p>
             </section>
 
             <section id="use-cases">
                 <h2>Сценарии использования</h2>
                 <p>Meridian подходит для любого вопроса, где важна истина, а не мнение.</p>
-                <ul class="use-case-list">
-                    <li><strong>🍕 Бытовые вопросы:</strong> Какая пицца действительно лучшая? Проведите слепую дегустацию и сравните предсказания.</li>
-                    <li><strong>🌱 Серьёзные гипотезы:</strong> Может ли домохозяйство прокормить себя? Исследуйте урожайность, затраты и логистику.</li>
-                    <li><strong>💡 Бизнес-решения:</strong> Стоит ли запускать проект? Сформулируйте ключевые предположения и отслеживайте, какие из них подтверждаются.</li>
-                </ul>
-            </section>
-
-            <section id="faq">
-                <h2>Частые вопросы (FAQ)</h2>
-                <div class="faq-list">
-                    <details>
-                        <summary>Это бесплатно?</summary>
-                        <p>Да, Meridian находится в активной разработке и доступен для экспериментов. Вы можете развернуть его локально или использовать публичный инстанс.</p>
-                    </details>
-                    <details>
-                        <summary>Мои данные в безопасности?</summary>
-                        <p>Мы уделяем этому первостепенное внимание. Приватные сообщения шифруются, а AI-функции работают локально. Однако помните, что проект находится в стадии pre-1.0, поэтому делайте резервные копии важных данных.</p>
-                    </details>
-                    <details>
-                        <summary>Нужно ли мне быть экспертом?</summary>
-                        <p>Нет. Meridian создан для обычных людей, которые хотят мыслить яснее. Инструменты подскажут, как правильно формулировать гипотезы и проверять их.</p>
-                    </details>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>🍕 Бытовые вопросы</h3>
+                        <p>Какая пицца действительно лучшая? Проведите слепую дегустацию и сравните предсказания.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🌱 Серьёзные гипотезы</h3>
+                        <p>Может ли домохозяйство прокормить себя? Исследуйте урожайность, затраты и логистику.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💡 Бизнес-решения</h3>
+                        <p>Стоит ли запускать проект? Сформулируйте ключевые предположения и отслеживайте их.</p>
+                    </div>
                 </div>
             </section>
 
-            <div class="page-footer">
-                <p>Готовы попробовать? <a href="https://miridin.com" class="btn-primary">Перейти на Meridian →</a></p>
-            </div>
+            <hr class="divider">
+
+            <section id="architecture">
+                <h2>Архитектура системы</h2>
+                <p>Meridian построен на основе микросервисной архитектуры, оптимизированной для локального развертывания и обеспечения максимальной приватности. Система состоит из трех основных слоев:</p>
+                <ul class="styled-list">
+                    <li><strong>Слой представления:</strong> Next.js приложение (SSR/SPA), обеспечивающее отзывчивый интерфейс и работу с графом.</li>
+                    <li><strong>Слой бизнес-логики:</strong> FastAPI (Python 3.12), обрабатывающий запросы, управляющий доступом и оркестрирующий работу AI-моделей.</li>
+                    <li><strong>Слой данных:</strong> PostgreSQL с расширением <code>pgvector</code> для векторного поиска, а также Redis для кэширования.</li>
+                </ul>
+            </section>
+
+            <section id="tech-stack">
+                <h2>Технологический стек</h2>
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Уровень</th>
+                            <th>Технологии</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>Next.js, React, TypeScript</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Backend</strong></td>
+                            <td>FastAPI (Python 3.12), SQLAlchemy, Alembic</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Базы данных</strong></td>
+                            <td>PostgreSQL (с pgvector), Redis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AI / ML</strong></td>
+                            <td>Ollama (локальные модели, без внешних API)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Инфраструктура</strong></td>
+                            <td>Docker Compose, Caddy (Reverse Proxy)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="quick-start">
+                <h2>Быстрый старт (Разработка)</h2>
+                <p>Для запуска проекта локально вам понадобятся <strong>Docker</strong> и <strong>Docker Compose v2</strong>. Ollama опционален и нужен только для AI-функций.</p>
+                <pre><code># 1. Клонируйте репозиторий
+git clone https://github.com/Dinozavrikov/Meridian.git
+cd Meridian
+
+# 2. Настройте переменные окружения
+cp .env.example .env
+cp docker-compose.override.example.yml docker-compose.override.yml
+
+# 3. Сгенерируйте секретные ключи (пример для Linux)
+sed -i "s|^SECRET_KEY=.*|SECRET_KEY=$(openssl rand -hex 32)|" .env
+sed -i "s|^POSTGRES_PASSWORD=.*|POSTGRES_PASSWORD=$(openssl rand -hex 16)|" .env
+
+# 4. Запустите контейнеры
+docker compose up -d --build postgres redis backend frontend</code></pre>
+                <p class="note">После запуска приложение будет доступно по адресу <code>http://localhost:3000</code>.</p>
+            </section>
+
+            <hr class="divider">
+
+            <section id="security">
+                <h2>Безопасность и Конфиденциальность</h2>
+                <p>В корпоративной среде безопасность данных стоит на первом месте. В Meridian реализованы следующие механизмы:</p>
+                <ul class="styled-list">
+                    <li><strong>Шифрование данных:</strong> Приватные сообщения шифруются на уровне базы данных (AES). Резервные копии также зашифрованы.</li>
+                    <li><strong>Локальный AI:</strong> Все процессы обработки естественного языка (NLP), включая эмбеддинги и перевод, выполняются локально через Ollama. Данные не передаются в OpenAI или другие облачные сервисы.</li>
+                    <li><strong>Аудит:</strong> Каждое действие в системе логируется. Удаленные данные перемещаются в корзину и могут быть восстановлены администратором.</li>
+                </ul>
+            </section>
+
+            <section id="license">
+                <h2>Лицензия</h2>
+                <p>Проект распространяется с открытым исходным кодом. Подробную информацию о правах и ограничениях можно найти в файле <a href="https://github.com/Dinozavrikov/Meridian/blob/main/LICENSE">LICENSE</a> в корне репозитория.</p>
+            </section>
+
+            <!-- Футер -->
+            <footer class="site-footer">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h4>Meridian</h4>
+                        <p>Инструмент для честного мышления и проверки гипотез.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ресурсы</h4>
+                        <ul>
+                            <li><a href="https://github.com/Dinozavrikov/Meridian">Исходный код</a></li>
+                            <li><a href="https://github.com/Dinozavrikov/Meridian/blob/main/CHANGELOG.md">Changelog</a></li>
+                            <li><a href="https://github.com/Dinozavrikov/Meridian/issues">Сообщить об ошибке</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Статус</h4>
+                        <p><span class="status-dot"></span> Все системы работают</p>
+                        <p style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem;">Сборка: GitHub Pages</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Meridian Project. Все права защищены.</p>
+                </div>
+            </footer>
         </main>
     </div>
     <script src="assets/js/main.js"></script>
